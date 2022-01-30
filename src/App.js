@@ -10,6 +10,8 @@ import AdminLogin from "./screens/admin/Login";
 import AdminPage from "./screens/admin/Page";
 
 import Splash from "./screens/Splash";
+import Login from "./screens/Login";
+import Home from "./screens/Home";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
         <Route path="/admin" element={<Admin />} />
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin-page" element={<AdminPage />} />
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
      

@@ -35,7 +35,7 @@ const AjouterClient=()=>{
         const btn=e.target;
         btn.innerHTML="Patientez...";
         btn.disabled=true;
-        const client={nom,email,telephone,password,date:firebase.firestore.FieldValue.serverTimestamp()};
+        const client={nom,email,telephone,password,date:firebase.firestore.FieldValue.serverTimestamp(),nouveau:true};
         db.collection("clients").add(client).then(()=>{
             set_alerte("Client bien ajouté");
             btn.disabled=false;

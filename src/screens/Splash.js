@@ -2,8 +2,19 @@ import "../styles/splash.scss";
 import {auth, db} from "../connexion_base";
 import {useState,useEffect} from "react";
 import logo from "../components/img/logo.jpg";
+import {useNavigate} from "react-router-dom";
 
 const Splash=()=>{
+    const navigate=useNavigate ();
+    useEffect(()=>{
+        auth.onAuthStateChanged((user)=>{
+            if(user==null){
+                navigate("/login");
+            }else{
+                navigate("/home");
+            }
+        })
+    },[auth]);
 
     return(
         <div className="splash">
