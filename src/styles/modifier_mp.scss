@@ -28,5 +28,18 @@
                 background-color: whitesmoke;
             }
         }
+
+        >button{
+            width:100px;
+            margin:auto;
+            padding:0.6rem;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        >p{
+            text-align: center;
+            font-size: 0.8rem;
+        }
     }
 }
