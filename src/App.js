@@ -14,6 +14,7 @@ import Login from "./screens/Login";
 import Home from "./screens/Home";
 import Retrait from "./screens/Retrait";
 import Profile from "./screens/Profile";
+import Recherche from "./screens/Recherche";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/retrait" element={<Retrait />} />
         <Route path="/profil" element={<Profile />} />
+        <Route path="/recherche" element={<Recherche />} />
       </Routes>
     </BrowserRouter>
      

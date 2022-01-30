@@ -8,6 +8,7 @@ const initialState = {
  me:null,
  loading:false,
  mouvements:[],
+ search:"",
 };
 
 export const counterSlice = createSlice({
@@ -33,6 +34,9 @@ export const counterSlice = createSlice({
     },
     setMouvements:(state, action)=>{
       state.mouvements= action.payload;
+    },
+    setSearch:(state, action)=>{
+      state.search= action.payload;
     }
   },
  
@@ -45,7 +49,8 @@ export const {
   setTab,
   setMe,
   setLoading,
-  setMouvements
+  setMouvements,
+  setSearch,
 } = counterSlice.actions;
 
 
@@ -55,5 +60,6 @@ export const selectTab= (state) => state.counter.tab;
 export const selectMe=(state)=> state.counter.me;
 export const selectLoading= (state) => state.counter.loading;
 export const selectMouvements= (state) => state.counter.mouvements;
+export const selectSearch= (state) => state.counter.search;
 
 export default counterSlice.reducer;

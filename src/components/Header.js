@@ -47,6 +47,10 @@ export default function ProminentAppBar() {
     }
   },[me,loading])
 
+  const go_to_search=()=>{
+    navigate("/recherche");
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -61,7 +65,7 @@ export default function ProminentAppBar() {
             Material-UI
           </Typography>
 
-          <IconButton aria-label="search" color="inherit">
+          <IconButton aria-label="search" color="inherit" onClick={go_to_search}>
             <SearchIcon />
           </IconButton>
 
