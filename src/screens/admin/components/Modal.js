@@ -8,11 +8,11 @@ export default function SimpleModal({width,content,click}) {
       
       function getModalStyle() {
         const top = 10 ;
-        const left = 40;
+        const left = 10;
       
         return {
           top: `${top}%`,
-          left: `${left}%`,
+          
           
         };
       }
@@ -23,8 +23,10 @@ export default function SimpleModal({width,content,click}) {
 
       const useStyles = makeStyles((theme) => ({
         paper: {
-          position: 'absolute',
+          
           width: width,
+          margin:"auto",
+          marginTop:"1rem",
           backgroundColor: theme.palette.background.paper,
           border: '2px solid silver',
           boxShadow: theme.shadows[5],

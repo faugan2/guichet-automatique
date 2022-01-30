@@ -12,6 +12,8 @@ import AdminPage from "./screens/admin/Page";
 import Splash from "./screens/Splash";
 import Login from "./screens/Login";
 import Home from "./screens/Home";
+import Retrait from "./screens/Retrait";
+import Profile from "./screens/Profile";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
 
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/retrait" element={<Retrait />} />
+        <Route path="/profil" element={<Profile />} />
       </Routes>
     </BrowserRouter>
      

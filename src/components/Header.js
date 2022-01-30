@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -9,6 +9,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Menu from "./Menu";
 import Tabs from "./Tabs";
+import {useSelector,useDispatch} from "react-redux";
+import {selectMe,selectLoading} from "../features/counterSlice";
+import {useNavigate} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,6 +36,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProminentAppBar() {
   const classes = useStyles();
+  const me=useSelector(selectMe);
+  const loading=useSelector(selectLoading);
+
+  const navigate=useNavigate ();
+  useEffect(()=>{
+    console.log(me,loading);
+    if(me==null && loading==false){
+      navigate("/")
+    }
+  },[me,loading])
 
   return (
     <div className={classes.root}>

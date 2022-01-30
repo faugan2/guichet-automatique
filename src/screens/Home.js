@@ -9,6 +9,7 @@ import {useSelector,useDispatch} from "react-redux";
 import Actions from "../components/Actions";
 import MonCompte from "../components/MonCompte";
 import Historique from "../components/Historique";
+import Footer from "../components/Footer";
 const Home=()=>{
     const navigate=useNavigate ();
     const dispatch=useDispatch();
@@ -35,6 +36,8 @@ const Home=()=>{
                 <MonCompte />
                 <Historique />
             </SwipeableViews>
+
+            <Footer />
         </div>
     );
 }

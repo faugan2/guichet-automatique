@@ -22,6 +22,10 @@ export default function SimpleMenu() {
       await auth.signOut();
       navigate("/");
   }
+
+  const go_to_profil=()=>{
+    navigate("/profil");
+  }
   return (
     <div>
     <IconButton aria-label="display more actions" edge="end" color="inherit" onClick={handleClick}>
@@ -36,8 +40,7 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Mon compte</MenuItem>
+        <MenuItem onClick={go_to_profil}>Profile</MenuItem>
         <MenuItem onClick={logout}>Logout</MenuItem>
       </Menu>
     </div>

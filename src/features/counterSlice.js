@@ -5,6 +5,9 @@ const initialState = {
  page:1,
  client:null,
  tab:0,
+ me:null,
+ loading:false,
+ mouvements:[],
 };
 
 export const counterSlice = createSlice({
@@ -21,6 +24,15 @@ export const counterSlice = createSlice({
     },
     setTab:(state, action)=>{
       state.tab= action.payload;
+    },
+    setMe:(state, action)=>{
+      state.me= action.payload;
+    },
+    setLoading:(state, action)=>{
+      state.loading= action.payload;
+    },
+    setMouvements:(state, action)=>{
+      state.mouvements= action.payload;
     }
   },
  
@@ -31,11 +43,17 @@ export const {
   setPage,
   setClient,
   setTab,
+  setMe,
+  setLoading,
+  setMouvements
 } = counterSlice.actions;
 
 
 export const selectPage = (state) => state.counter.page;
 export const selectClient=(state)=> state.counter.client;
 export const selectTab= (state) => state.counter.tab;
+export const selectMe=(state)=> state.counter.me;
+export const selectLoading= (state) => state.counter.loading;
+export const selectMouvements= (state) => state.counter.mouvements;
 
 export default counterSlice.reducer;
