@@ -6,11 +6,13 @@ import {auth, db} from "../../../connexion_base"
 import {useState,useEffect} from "react";
 import { useSelector,useDispatch} from "react-redux";
 import {selectPage, setPage} from "../../../features/counterSlice";
-
+import {useNavigate} from "react-router-dom";
 const Left=()=>{
     const dispatch=useDispatch();
+    const navigate=useNavigate ();
     const logout=async ()=>{
         await auth.signOut();
+        navigate("/admin-login");
     }
 
     const [page,set_page]=useState(1);
